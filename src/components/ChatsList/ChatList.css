@@ -1,0 +1,40 @@
+.stx-chatlist-item {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.stx-chatlist-item:hover {
+    background-color: #eef1ff;
+}
+
+.stx-chatlist-chatname {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2b273b;
+}
+
+.stx-chatlist-lastmessage {
+    font-size: 12px;
+    color: #5c576c;
+}
+
+.stx-chatlist-age {
+    font-size: 12px;
+    color: #5c576c;
+}
+
+.stx-chatlist-unreaded {
+    background-color: #6600FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+}

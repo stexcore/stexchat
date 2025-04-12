@@ -1,0 +1,20 @@
+.stx-chatitem-layout {
+    display: flex;
+    flex-direction: column;
+    background-color: #6600FF;
+    min-height: 100vh;
+}
+
+.stx-chatitem-layout-header {
+    color: white;
+}
+
+.stx-chatitem-layout-content {
+    flex: 1;
+    background-color: white;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+} 

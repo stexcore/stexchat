@@ -1,0 +1,17 @@
+.stx-icon-button {
+    transition: 0.1s background-color;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: currentColor;
+}
+
+.stx-icon-button:hover {
+    background-color: rgba(0,0,0,0.1);
+}

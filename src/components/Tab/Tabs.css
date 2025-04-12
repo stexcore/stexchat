@@ -1,0 +1,34 @@
+.stx-tabs {
+    position: relative;
+    display: flex;
+    margin-bottom: 4px;
+}
+
+.stx-tabs .stx-line {
+    top: calc(100%);
+    background-color: #6600ff;
+    height: 2px;
+    transition: 0.3s;
+    position: absolute;
+    animation: 0.2s smooth;
+}
+
+.stx-tab-item {
+    transition: 0.3s;
+    background-color: transparent;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.stx-tab-item.active {
+    background-color: #6600ff05;
+}
+
+.stx-tab-item.active svg {
+    color: #6600ff;
+}

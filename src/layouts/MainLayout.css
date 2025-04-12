@@ -1,0 +1,13 @@
+.stx-main-layout {
+    background: #6600FF;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+    padding-top: 40px;
+}
+
+.stx-main-layout-content {
+    padding: 20px;
+}
