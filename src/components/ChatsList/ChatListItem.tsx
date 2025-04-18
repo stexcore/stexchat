@@ -1,7 +1,6 @@
 import { useMemo } from "react";
 import Avatar from "../Avatar/Avatar";
 import Box from "../Box/Box";
-import Typography from "../Typography/Typography";
 import "./ChatList.css";
 import ageUtil from "../../utils/age.util";
 
