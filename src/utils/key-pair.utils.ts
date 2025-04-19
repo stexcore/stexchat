@@ -1,5 +1,6 @@
 import environment from "../environments/environment";
 import dbUtils from "./db.utils";
+import deviceUtil from "./device.util";
 
 // Generate a pair of public and private keys
 function generateKeyPair() {
@@ -56,7 +57,10 @@ function exchangePublicKey(localPublicKey: string) {
             fetch(new URL("/exchange-info", environment.backend), {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ publicKey: localPublicKey }),
+                body: JSON.stringify({ 
+                    id_app_device: deviceUtil.id_app_device_data,
+                    public_key: localPublicKey,
+                }),
             })
                 .then((response) => {
                     if (response.status == 200) {
@@ -66,7 +70,13 @@ function exchangePublicKey(localPublicKey: string) {
                     }
                 })
                 .then((data) => {
-                    resolve({ publicKey: data.publicKey }); // Server's public key
+                    const clearPublicKey = data.public_key
+                        .replace(/-----BEGIN PUBLIC KEY-----/g, "")
+                        .replace(/-----END PUBLIC KEY-----/g, "")
+                        .replace(/\r/g, "")
+                        .replace(/\n/g, "");
+
+                    resolve({ publicKey: clearPublicKey }); // Server's public key
                 })
                 .catch(reject); // Handle request errors
         } catch (err) {
